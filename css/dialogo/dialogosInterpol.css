@@ -1,0 +1,229 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-color: rgba(255, 118, 5, 0.582);
+}
+
+.headerDerecha{
+  display: flex;
+  flex-direction: row;
+  justify-content: right; /* alinea los elementos hacia el final (derecha) */
+  align-items: center; /* Centra verticalmente el contenido */
+  align-content: center;
+  width: 100%;
+}
+
+
+/*MENU*/
+
+
+
+
+main {
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  width: auto;
+  /*background-color: rgba(229, 222, 11, 0.582);*/
+}
+
+.spitch {
+  max-width: 90%; 
+  margin: 0 auto; 
+  text-align: justify; 
+  line-height: 1.6; /* Ajusta el espaciado entre líneas */
+  font-size: 18px;
+  color: #333; 
+  padding: 20px; 
+  background-color: #e0e0e09a;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease; 
+  font-weight: 500; 
+  font-style: italic; 
+}
+
+/* para el color de fondo cuando el mouse pasa sobre el párrafo */
+.spitch:hover {
+  background-color: #f9f9f9; 
+}
+.cita {
+  background-color: #e0e0e09a;
+  font-style: italic;
+  color: rgb(3, 4, 110);
+  padding: 1%; 
+  text-align: center;
+  font-size: 40px; 
+  margin-top: 20px; 
+  border-radius: 10px; 
+}
+
+.cita:hover {
+  background-color: #f9f9f9; 
+}
+
+.dialogo {
+  display: flex;
+  /*border: solid 2px rgba(255, 255, 255, 0.582);*/
+  width: 100%;
+  height: 300PX;
+    flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  align-content: center;
+ /* background-color: rgba(255, 255, 255, 0.822);*/
+  opacity: 0; /* Inicialmente invisible */
+  animation: aparecer 1s forwards;
+
+}
+
+
+.pSpain{
+  display: flex;
+  max-width:   80%;
+  max-height: 50%;
+  position: relative;
+  border-radius: 50%;
+ 
+  background: rgb(0,108,255);
+  background: radial-gradient(circle, rgba(0,108,255,1) 0%, rgba(9,9,121,1) 52%, rgba(2,0,36,1) 75%);
+
+  -webkit-box-shadow:0px 0px 68px 80px rgba(245,245,245,0.85);
+  -moz-box-shadow: 0px 0px 68px 80px rgba(245,245,245,0.85);
+  box-shadow: 0px 0px 68px 80px rgba(245,245,245,0.85);
+}
+.pMex{
+  display: flex;
+  max-width:   80%;
+  max-height: 50%;
+  position: relative;
+  border-radius: 50%;
+
+  background: rgba(190, 198, 209, 0.322);
+  background: radial-gradient(circle, rgba(6, 38, 82, 0.308) 10%, rgb(44, 44, 173) 20%, rgb(228, 227, 233) 75%);
+
+  -webkit-box-shadow:0px 0px 68px 80px rgba(245,245,245,0.85);
+  -moz-box-shadow: 0px 0px 68px 80px rgba(245,245,245,0.85);
+  box-shadow: 0px 0px 68px 80px rgba(245,245,245,0.85);
+}
+
+
+
+
+#dialogo1 {
+  animation-delay: 0.5s; /* Ret 0.5s para el primer diálogo */
+}
+
+#dialogo2 {
+  animation-delay: 2s; /* Ret 2s para el segundo diálogo */
+}
+#dialogo3 {
+  animation-delay: 3.5s; 
+}
+#dialogo4 {
+  animation-delay: 5s; 
+}
+
+@keyframes aparecer {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.arrow_box_left {
+  margin-left: 10px;
+	position: relative;
+	background: rgba(3, 16, 56, 0.541);
+	border: 4px solid #c2e1f5;
+  width: 250px;
+  height: 250px;
+  text-align:justify;
+  color: #FFFFFF;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.arrow_box_left:after, .arrow_box_left:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_left:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-right-color: #88b7d5;
+	border-width: 30px;
+	margin-top: -30px;
+}
+.arrow_box_left:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-right-color: #c2e1f5;
+	border-width: 36px;
+	margin-top: -36px;
+}
+
+.arrow_box_right {
+	position: relative;
+	background: rgba(3, 16, 56, 0.541);
+	border: 4px solid #c2e1f5;
+  width: 250px;
+  height: 250px;
+  text-align:justify;
+  color: #FFFFFF;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.arrow_box_right:after, .arrow_box_right:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_right:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #88b7d5;
+	border-width: 30px;
+	margin-top: -30px;
+}
+.arrow_box_right:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: #c2e1f5;
+	border-width: 36px;
+	margin-top: -36px;
+}
+
+
+
+
+
+
+
+
+

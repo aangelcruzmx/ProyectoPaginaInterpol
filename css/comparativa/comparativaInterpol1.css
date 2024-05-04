@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+
+#fRoja, #otrasFichas{
+    text-align: center;
+}
+
+
+/*estilos del MAIN*/
+
+main {
+    padding-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+}
+
+article {
+    box-sizing: border-box;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fichaRoja {
+    border-color: red;
+    cursor: pointer;
+
+}
+
+
+/*con esta regla aseguro que si la pantalla disminuye a 768 pixeles
+los elementos article ocupen un 50% del ancho del contenedor*/
+@media (max-width: 48em) {
+    article {
+        width: calc(50% - 1.25em);
+    }
+}
+
+/*RESGLAS PARA LA TRANCISION*/
+
+.ficha-imagen {
+
+
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.ficha-imagen:hover,
+.ficha-imagen:focus {
+    transform: scale(1.5);
+    /* se puede ajustar el factor de escala */
+}
+
+.ficha-imagen.expandida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 80%;
+    height: auto;
+}
+
+
+/*REGLAS PARA LOS CUADROS*/
+
+
+.descripcion-cuadro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+    border-radius: 15px;
+    text-align: justify;
+    line-height: 1.5;
+
+}
+
+.descripcion-cuadro p {
+    margin-bottom: 10px;
+
+}
+
+
+.cerrar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    /* Color de fondo para destacar */
+    color: white;
+    /* Color de texto */
+    padding: 8px 12px;
+    /* Ajusta el tamaño del botón de cerrar */
+    border-radius: 5px;
+    /* Mayor radio para un aspecto más suave */
+    transition: background-color 0.3s ease-in-out;
+    /* Transición en el cambio de color de fondo */
+}
+
+.cerrar-btn:hover {
+    background-color: #2980b9;
+    /* Cambia el color de fondo al pasar el mouse para un efecto suave */
+}
+
+
+

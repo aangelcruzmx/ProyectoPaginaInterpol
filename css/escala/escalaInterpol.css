@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: rgba(46, 53, 70, 0.126);
+    color: red;
+}
+
+/* Estilos para h1 y h2 dentro del header */
+header h1 {
+    font-size: 36px; 
+}
+
+header h2 {
+    font-size: 18px; 
+}
+
+
+.containerGeneral{
+    padding-top: 135px;
+    max-width:80%;
+    margin: 0 auto;
+    background-color: #fff; /* Color de fondo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+/*CONTENDOR DEL CUADRO DE LAS BARRAS*/
+.contBarras{
+    
+    width: 100%;
+    display: flex;
+    /*float: right;*/
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 26, 197, 0.836);
+
+     /*imagen con transparencia*/
+
+    background-image: url('../../img/escala/InterpolElEspanol.jpg');
+    background-origin:border-box; 
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor cover =  redimensiona sin estirar disorsionadamente, a*/
+    background-attachment: fixed ;/*con esto se hec scrooll y la imagen no se mueve*/
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    /*background-origin:border-box;*/
+    /*background-attachment: fixed; /* Fija la imagen de fondo para que se mantenga en su lugar mientras te desplazas */
+    background-color: rgba(255, 255, 255, 0.5); /* Aquí, el último valor (0.5) representa la opacidad (0 = transparente, 1 = opaco) */
+}
+
+/*CUADRO DE LAS BARRAS*/
+.barras{
+    /*float : right;*/
+    /*display: flex;*/
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color:  rgba(79, 83, 183, 0.199);    
+}
+
+.crimes {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    color: white;
+}
+.moneyLaundering {
+    width: 90%;
+    background: linear-gradient(to right, rgba(0, 28, 189, 0.37) 15%, rgb(9, 214, 228) 50% , rgb(1, 175, 15));
+}
+.ransomware {width: 80%; 
+    background: linear-gradient(to right,rgba(0, 28, 189, 0.37) 15%, rgb(9, 214, 228) 50% , rgb(169, 3, 3));
+}
+.phishing {width: 65%; 
+    background: linear-gradient(to right,rgba(0, 28, 189, 0.37) 15%, rgb(1, 152, 172) 50%, rgb(255, 111, 0));
+}
+.fraude {width: 60%; 
+    background: linear-gradient(to right,rgba(0, 28, 189, 0.37) 15%, rgb(1, 152, 172) 50%, rgb(255, 2, 112));
+}
+.drugs {width: 75%; 
+    background: linear-gradient(to right,rgba(0, 28, 189, 0.37) 15%, rgb(1, 152, 172) 50%, rgb(16, 58, 0));
+}
+.informatica {width: 60%; 
+    background: linear-gradient(to right, rgba(0, 28, 189, 0.37) 15%, rgb(1, 152, 172) 50%, rgb(109, 44, 94));
+}
+.crimenOrg {width: 65%; 
+    background: linear-gradient(to right,rgba(0, 28, 189, 0.37) 15%, rgb(1, 152, 172) 50%, rgb(0, 0, 0));
+}
+.canabis {width: 60%; 
+    background: linear-gradient(to right, rgba(0, 28, 189, 0.37) 15%, rgb(11, 235, 11) 50%,  rgb(0, 33, 3));
+}
+
+/*CUADRO EXPLICACION*/
+.explicacion{
+    width: auto;
+    margin-left: 5px;
+    margin-right: auto;
+    margin: 10px;
+    text-align: justify;
+    background-color:rgba(46, 53, 70, 0.126);
+    
+}
+

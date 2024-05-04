@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+    padding-top: 135px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    
+    box-sizing: border-box;
+}
+
+/*MENU*/
+
+main {
+    padding-top: 20px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    /*flex-direction: column; /* para alinear verticalmente */
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+main,  html {
+    height: 100%;
+    margin: 0;
+}
+
+/*LETRERO EN MOVIMIENTO*/
+/*ESTE PEDAZO DE CODIGO (LETRERO EN MOVIMIENTO) ES DE UNA PLANTILLA DE INTERNET LIBRE PARA DESCARGAR EL LINK ESTA AL INICIO*/
+#contenedor {
+    padding-top: 135px;
+    text-align:center;
+    background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+    color:#555;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:10vh;
+    width: 70%; 
+    height: 10vh;
+    margin: 20px auto;
+
+    
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.letrero {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.letrero:first-of-type {
+    animation: showup 7s infinite;
+}
+
+.letrero:last-of-type {
+    width: 0px;
+    animation: reveal 7s infinite;
+}
+
+.letrero:last-of-type span {
+    margin-left: -355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left: -800px; }
+    20% { margin-left: -800px; }
+    35% { margin-left: 0px; }
+    100% { margin-left: 0px; }
+}
+
+@keyframes reveal {
+    0% {opacity: 0;width: 0px;}
+    20% {opacity: 1;width: 0px;}
+    30% {width: 355px;}
+    80% {opacity: 1;}
+    100% {opacity: 0;width: 355px;}
+}
+
+#pNegro {
+    font-size: 14px;
+    color: rgb(247, 243, 243);
+    margin-top: 200px;
+}
+
+
+/*popupdel inicio*/
+/* fondo oscuro detrás del popup */
+#popupBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* contenedor del popup */
+#popupContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; 
+    height: auto;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    
+}
+
+/* Estilos para el botón de cerrar el popup */
+#closePopup {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#popupContainer p{
+    text-align:center;
+}
+
+/*imagen del popup*/
+#popupContainer img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* proporcion de la imagen */
+}
+
+
+/*AREA DEL JUEGO*/
+#gameArea {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    /*background-color: #fff;*/
+    border: 1px solid #000;
+    background-image: url('../../img/juego/juegoInterpol/mapaMundi.jpg');
+    background-size: cover; /* imagen cubre todo el área sin perder proporción */
+    background-position: center; 
+}
+
+/*imagen del fugitivo que corre*/
+#fugitivo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    
+}
+
+/*Area de nivel (negro)  e instrucciones (verde)*/
+/*Area de nivel (negro) */
+#cuadroNegro  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #000;
+    margin: 10px;
+    width: 200px; 
+    height: 400px; 
+}
+
+#rectanguloNegro1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 150px; 
+}
+
+#rectanguloNegro1 img {
+    margin-top: 5px;
+    width: 200px; 
+    height: auto;
+}
+
+#rectanguloNegro2 {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+}
+
+#rectanguloNegro2 p {
+    text-align: center; 
+    margin: 0 10px; 
+    width: 180px; 
+}
+
+.rectangulo {
+    width: 80px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+#rectanguloNegro2 {
+    width: fit-content;
+}
+
+
+/*Area policia lego(verde)*/
+#cuadroVerde{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 200px;
+    height: 400px;
+    
+}
+
+#policia{
+    width:200px;
+    height: auto;
+}
+
+#contenedorInstrucciones  {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
+

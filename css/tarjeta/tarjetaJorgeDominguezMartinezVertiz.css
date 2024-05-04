@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+main {
+    padding-top: 135px;
+    width: 100%; /* Ocupa el 100% del ancho del body */
+    display: flex;
+    justify-content: center; /* centrado horizontal  */
+    align-items: center; /*entrado vertical  */
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.qr {
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+}
+
+
+.photo, .qr {
+    margin: 10px;
+    
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+
+/*Codigo QR*/
+.qr-code {
+    
+    width: 300px; /* tamaño del QR */
+    height: 300px; /* debe ser igual para que el QR sea  cuadrado */
+    margin: 15px;
+}
+
+/*INformacion */
+.datos {
+    display: flex;
+    flex-direction: column;  /* Alinea los elementos verticalmente*/
+    align-items: center;     /* Centra los elementos horizontalmente*/
+    justify-content: center; /* Opcional, centrar el contenido verticalmente*/
+    width: 100%;             /* Ocupa el ancho necesario*/
+}
+
+.datos h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+    
+}
+
+.datos p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.boton {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px ;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}

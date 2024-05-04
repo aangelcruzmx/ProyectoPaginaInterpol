@@ -1,0 +1,434 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+/*HEADER*/
+
+/*HEADER*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    /*background-color: rgba(255, 118, 5, 0.582);*/
+}
+
+.headerDerecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    /* alinea los elementos hacia el final (derecha) */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    align-content: center;
+    width: 100%;
+}
+
+#menu {
+
+
+    /*background: #1b198f1c;*/
+    color: #FFF;
+    height: 45px;
+    padding-top: 10px;
+    padding-left: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: NaNpx;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+#menu li a:hover {
+    color: rgb(10, 1, 94);
+    background: #F2F2F2;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#menu label {
+    display: none;
+    line-height: NaNpx;
+    text-align: center;
+    position: absolute;
+    left: 35px
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block
+}
+
+#menu ul.sub-menus a:hover {
+    background: #F2F2F2;
+    color: #444444;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative
+        
+    }
+
+    #menu ul {
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none
+    }
+
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+
+    #menu input {
+        z-index: 4
+    }
+
+    #menu input:checked+label {
+        color: white
+    }
+
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+
+    #menu input:checked~ul {
+        display: block
+    }
+}
+
+#fRoja, #otrasFichas{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header,
+footer {
+    background-color: rgb(22, 52, 116);
+    color: white;
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.25em;
+    /*antes en 20px*/
+}
+
+article {
+    box-sizing: border-box;
+
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fichaRoja {
+    border-color: red;
+    cursor: pointer;
+
+}
+
+.fichaAmarilla {
+    border-color: yellow;
+    cursor: pointer;
+}
+
+.fichaAzul {
+    border-color: blue;
+    cursor: pointer;
+}
+
+.fichaNegra {
+    border-color: black;
+    cursor: pointer;
+}
+
+.fichaVerde {
+    border-color: green;
+    cursor: pointer;
+}
+
+.fichaNaranja {
+    border-color: orange;
+    cursor: pointer;
+}
+
+.fichaMorada {
+    border-color: purple;
+    cursor: pointer;
+}
+
+
+/*con esta regla aseguro que si la pantalla disminuye a 768 pixeles
+los elementos article ocupen un 50% del ancho del contenedor*/
+@media (max-width: 48em) {
+    article {
+        width: calc(50% - 1.25em);
+    }
+}
+
+/*RESGLAS PARA LA TRANCISION*/
+
+.ficha-imagen {
+
+
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.ficha-imagen:hover,
+.ficha-imagen:focus {
+    transform: scale(1.5);
+    /* se puede ajustar el factor de escala */
+}
+
+.ficha-imagen.expandida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 80%;
+    height: auto;
+}
+
+
+/*REGLAS PARA LOS CUADROS*/
+
+
+.descripcion-cuadro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+    border-radius: 15px;
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.5;
+
+}
+
+.descripcion-cuadro p {
+    margin-bottom: 10px;
+
+}
+
+/*
+.descripcion-cuadro:hover {
+    background-color: #f8f8f8; 
+}*/
+
+.cerrar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    /* Color de fondo para destacar */
+    color: white;
+    /* Color de texto */
+    padding: 8px 12px;
+    /* Ajusta el tamaño del botón de cerrar */
+    border-radius: 5px;
+    /* Mayor radio para un aspecto más suave */
+    transition: background-color 0.3s ease-in-out;
+    /* Transición en el cambio de color de fondo */
+}
+
+.cerrar-btn:hover {
+    background-color: #2980b9;
+    /* Cambia el color de fondo al pasar el mouse para un efecto suave */
+}
+
+
+
+
+
+
+
+
+/*FOOTER CAMBIADO*/
+
+footer {
+    background-color: rgb(22, 52, 116);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffc107;
+    /* Amarillo brillante */
+}
+
+.footer-contact {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon .icon {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon .icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}

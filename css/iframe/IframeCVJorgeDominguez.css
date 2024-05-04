@@ -1,0 +1,84 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    /*margin: 20;*/
+    
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff; /* Color de fondo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    
+}
+
+
+.header {
+    display: flex; /* Utilizamos Flexbox para el diseño */
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+.biografia{
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex; /* Utilizamos Flexbox para el diseño */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+img.logo {
+    max-width: 100px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    display: flex;
+}
+
+img.bio {
+    display: flex;
+    justify-content: center;
+    max-width: 250px;
+    margin-right: auto; /*Estos dos son para centrar la imagen*/
+    margin-left: auto;
+}
+
+h1 {
+    color: #333; /* Color del texto del nombre */
+    flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+}
+
+h2 {
+    font-size: 24px; /* Tamaño del subtítulo "Experiencia Laboral", "Educación", etc. */
+    color: #333;
+}
+
+h3 {
+    font-size: 20px; /* Tamaño de los títulos de trabajo o educación */
+    color: #007bff; /* Color del título */
+}
+
+p {
+    margin: 5px 0;
+}
+
+img.profile-pic {
+    max-width: 200px;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+img.edu-logo {
+    max-width: 50px; /* Ajusta el tamaño de los logos de educación */
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+
+
+/* FOOTER */

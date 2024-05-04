@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+/*Estilos MAIN*/
+main {
+    padding-top: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80%;
+}
+
+
+/*RESEÑAS*/         
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px; 
+    margin: auto;
+}
+
+.resena {
+    position: relative;
+    width: 300px; 
+    height: 250px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.imagen-resena {
+    
+    max-width: 120%;
+    max-height: 120%;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.texto-resena {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 90%;
+    height: 90%;    
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    background-color: #f0f0f0; 
+
+}
+
+.resena:hover .imagen-resena {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.resena:hover .texto-resena {
+    opacity: 1;
+    visibility: visible;
+}
+
+  /* Distribucion  */
+  
+#resena1, #resena2, #resena3, #resena4 {
+    flex: 1 0 41%; 
+}
+
+#resena-central {
+    flex: 1 0 40%; 
+}
+
+@media (min-width: 600px) {
+    .contenedor {
+justify-content: space-between;
+    }
+
+.resena {
+width: calc(20% - 20px);
+}
+
+#resena-central {
+order: 3;
+width: calc(20% - 20px);
+}
+}
+

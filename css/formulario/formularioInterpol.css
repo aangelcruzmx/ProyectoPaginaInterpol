@@ -1,0 +1,99 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+main{
+    padding-top: 135px;
+}
+
+
+/*Estilo formulario*/
+form {
+    background-color: #E1EFFF; 
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form ul li {
+    margin-bottom: 10px;
+}
+
+form ul li label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*estilo entrada de datos*/
+
+input[type=text], input[type=tel], input[type=email], input[type=date], textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/*estilos para el submenu*/
+
+.sub-menus {
+    display: none; /* Opara ocultar el submenu al inicio */
+    position: absolute; 
+    background-color: #005A9C; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px; 
+    z-index: 1;
+}
+
+/* para los demas elemento del submenu */
+.sub-menus li {
+    padding: 10px 0; 
+}
+
+.sub-menus li a {
+    color: white; 
+    padding: 10px 15px;
+    text-decoration: none; /*para que noi se subraye la url*/
+    display: block;
+}
+
+
+nav ul li:hover .sub-menus {
+    display: block; 
+}
+

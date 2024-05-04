@@ -1,0 +1,184 @@
+body {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+
+   
+}
+
+/*
+*{
+    border: solid 2px red;
+}
+*/
+
+/* HEADER */
+header {
+       
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    position: relative; 
+
+}
+
+/* REEL DE FOTOS */
+
+#reelFotos {
+    overflow: hidden; /* si alguina imagen desbordan la oculta */
+    width: 100%;
+    margin: 0 auto; 
+    white-space: nowrap; 
+    
+}
+
+#reelFotos img {
+    height: 200px;
+    width: 250px; 
+    transition: transform 3s ease-in-out; /* se usa pata transicion suave*/
+    display: inline-block; 
+    margin-right: 120px;
+}
+
+
+
+/* ANIMACIÓN DEL CARRUSEL */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 7110px)); /* con esto se mueven las imagenes a la izquierda */
+    }
+}
+
+/* Aplica la animación al carrusel */
+#reelFotos img {
+    animation: moveLeft 65s linear infinite; /* se necesitan    15s a 3s para que se mueva cada 3 segundos */
+}
+
+/* Detiene la animación al pasar el mouse */
+#reelFotos:hover img {
+    animation-play-state: paused;
+}
+
+
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+
+/*LADO IZQUIERDO DE LA PAGINA*/
+/* ASIDE IZQUIERDO */
+aside.izquierdo {
+    width: 25%;
+    /*border: 2px solid #e74c3c; */
+    padding: 10px;
+    
+}
+
+#video1{
+    width: 98%;
+    height: 400px;
+    overflow: hidden;
+}
+
+#video2{
+    width: 98%;
+    height: 400px;
+    overflow: hidden;
+
+}
+
+#video3{
+    width: 98%;
+    height: 400px;
+    overflow: hidden;
+
+}
+
+
+
+/* ARTICLE centro de la pagina */
+article {
+    width: 50%;
+    /*border: 2px solid #2ecc71; */
+    padding: 10px;
+    text-align: center;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*LADO DERECHO DE LA PAGINA*/
+/* ASIDE DERECHO */
+aside.derecho {
+    width: 25%;
+    /*border: 2px solid #f39c12; */
+    padding: 10px;
+}
+
+#miniatura1 {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#miniatura2{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+}
+#miniatura3{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* SECCIONES EN ASIDE IZQUIERDO Y DERECHO */
+aside section {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ecf0f1; /* Gris claro */
+}
+
+
+
+/* FORMULARIO (ESTRUCTURA BÁSICA) */
+#formulario {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+       
+}
+
+/* CONTADOR */
+#contador {
+    flex-direction: column;
+    /*  estilos  */
+}
