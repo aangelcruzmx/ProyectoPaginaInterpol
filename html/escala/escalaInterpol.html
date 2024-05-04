@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="escalaInterpol" content="width=device-width, initial-scale=1.0">
+    <title>Estadistica Interpol</title>
+    <link rel="stylesheet" href="../../css/escala/escalaInterpol.css">
+</head>
+<body>
+
+    <!--MENU-->
+
+<section id="menuContainer"></section>
+<script>
+    // Código JavaScript para cargar menu.html
+    fetch('../../html/menu/menu.html')
+    .then(response => response.text())
+        .then(html => {
+            document.getElementById('menuContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+</script>
+
+
+    <div class="containerGeneral">
+
+            <header>
+                <h1>Principales Amenazas Delictivas</h1>
+                <h2>informe de interpol sobre tendencias mundiales de la delincuencia 2023</h2>
+            </header>
+            
+        <div class="contBarras">
+                        
+            <div class="barras">
+                <div class="crimes moneyLaundering ">Lavado de Dinero</div>
+            </div>
+
+            <div class="barras">
+                <div class="crimes ransomware">Ransomware</div>
+            </div>
+
+            <div class="barras">
+                <div class="crimes phishing">Phishing y estafas en línea</div>
+            </div>
+
+            <div class="barras">
+                <div class="crimes fraude">Fraude financiero</div>
+            </div>
+
+            <div class="barras">
+                <div class="crimes drugs">Trafico de drogas sinteticas</div>
+            </div>
+            
+            <div class="barras">
+                <div class="crimes informatica">Intrusion informatica</div>
+            </div>
+            
+            <div class="barras">
+                <div class="crimes crimenOrg">Crimen Organizado</div>
+            </div>
+            
+            <div class="barras">
+                <div class="crimes canabis">Trafico de Canabis</div>
+            </div>
+        
+        </div>
+
+        <div class="explicacion">
+            <p>Según los datos recogidos en nuestros 195 países miembros, los delitos financieros y los
+                cometidos por Internet son los que más preocupan a la policía de todo el mundo. Nuestro
+                primer Informe sobre las tendencias de la delincuencia a escala mundial muestra que más
+                del 60 % de los encuestados califican de “alta” o “muy alta” la amenaza que suponen los
+                delitos como el blanqueo de capitales, el ransomware, el phishing y las estafas en línea.
+                Además, se prevé que sean estos los delitos que más aumenten en el futuro.</p>
+        </div>
+        
+    </div>
+
+    
+<!--FOOTER-->
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+</body>
+</html>

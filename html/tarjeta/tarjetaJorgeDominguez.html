@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Jorge Dominguez Martinez</title>
+    <link rel="stylesheet" href="../../css/tarjeta/tarjetaJorgeDominguezMartinezVertiz.css">
+</head>
+<body>
+    <!--MENU-->
+
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    
+    <main>
+        <article class="card">
+            <div class="photo">
+                <img src="../../img/curriculum/jorgemv.jfif" alt="Jorge Dominguez" class="profile-pic">
+            </div>
+            <div class="datos">
+                <h3>Jorge Dominguez Martinez</h3>
+                <p>Director General de Asuntos Policiales Internacionales e INTERPOL</p>
+                <p>Experiencia destacada en la Agencia de Investigación Criminal y otros roles relevantes.</p>
+                <p><strong>Teléfono:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> j.dominguez@interpol.int</p>
+                <div class="qr">
+                    <img src="../../img/tarjeta/qrInterpolJorge.png" alt="QR Code" class="qr-code">
+                </div>
+                <a href="../../html/curriculum/cvJorgeDominguez.html" class="boton" target="_blank">Ver Curriculum</a>
+            </div>
+        </article>
+    </main>
+    
+    <!--FOOTER-->
+    <div id="footerContainer"></div>
+    <!-- Script para cargar el footer -->
+    <script>
+        fetch('../../html/footer/footer.html')  
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footerContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
+
+
+</body>
+</html>

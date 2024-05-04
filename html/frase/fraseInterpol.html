@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase Interpol</title>
+    <link rel="stylesheet" href="../../css/frase/fraseInterpol.css">
+</head>
+
+<body>
+
+        <!--MENU-->
+
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+        
+
+    <main>
+
+
+        <header>
+    <div class="container">
+        
+        <div class ="fondoImagen">
+            <img src="../../img/frase/195miembros_interpol.jpg" alt="Foto16Paises" class="interpolPaises_pic">
+                    <div class="frase">
+                <h1>Organización Internacional de Policía Criminal</h1>
+                <h1 id="lema">"Conectando policías... <br> para un mundo más seguro"</h1>
+            </div>
+        
+        </div>
+    </div>
+    </header>
+
+    </main>
+
+
+    <!--FOOTER-->
+    <div id="footerContainer"></div>
+
+    <!-- Script para cargar el footer -->
+    <script>
+        fetch('../../html/footer/footer.html')  
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footerContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones Interpol</title>
+    <link rel="stylesheet" href="../../css/comparativa/comparativaInterpol1.css">
+</head>
+<body>
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+    
+    <main>
+        <article class="fichaRoja" onclick="mostrarDescripcion('descripcionRoja')">
+            <h2>Ficha Roja</h2>
+            <img src="../../img/comparativa/comparativaInterpol/RedNoticeEsLR.jpg" alt="Ficha Roja" class="ficha-imagen">
+            <p class="ficha-descripcion"></p>
+        </article>
+        
+        
+        <article class="fichaSimilitudes" onclick="mostrarDescripcion('descripcionfichaSimilitudes')">
+            <h2>Otras notificaciones</h2>
+            <img src="../../img/comparativa/comparativaInterpol/Similitudes.jpg" alt="Ficha especial" class="ficha-imagen">
+            <p class="ficha-descripcion"></p>
+        </article>
+    </main>
+
+
+
+
+
+<!-- CUADROS DE LAS DESCRIPCIONES DE CADA UNA DE LAS FICHAS -->
+
+
+    <div id="descripcionRoja" class="descripcion-cuadro">
+        <span class="cerrar-btn" onclick="cerrarDescripcion('descripcionRoja')">Cerrar</span>
+        <h2>Ficha Roja</h2>
+        <p>La notificación roja es una solicitud dirigida a las fuerzas del orden de todo el mundo para localizar
+        y detener provisionalmente a una persona en espera de su extradición o entrega, o de una acción judicial similar. 
+        No es una orden de detención internacional. <br>
+
+        Las personas son buscadas por el país miembro solicitante o por un tribunal internacional.
+        Los países miembros aplican su propia legislación nacional para determinar si pueden detener a una persona. <br>
+            
+        La mayoría de las notificaciones rojas solo pueden ser consultadas por los organismos encargados de la aplicación de la ley.
+        A petición del país miembro interesado, se pueden publicar extractos de una notificación roja si se considera necesaria la
+        ayuda de los ciudadanos para hallar el paradero de una persona buscada o si esta plantea un peligro para la seguridad pública. <br>
+        <H1 id="fRoja"><font color="red">ES LA UNICA GIRADA PARA DETENER A PERSONAS Y CADA PAIS DECIDE SI LA EJECUTA O NO</font> </H1><br>
+        La Ficha Roja es particularmente notable porque es una solicitud directa de detención con fines de extradición, lo que implica un nivel de gravedad y urgencia mayor en comparación con otras notificaciones.
+    </p>
+    </div>
+    
+    
+    <div id="descripcionfichaSimilitudes" class="descripcion-cuadro">
+        <span class="cerrar-btn" onclick="cerrarDescripcion('descripcionfichaSimilitudes')">Cerrar</span>       
+        <h2>Similitudes entre Fichas</h2>
+        <p>
+            Las notificaciones y las difusiones contienen dos tipos principales de información:
+            <ul>
+                <li>Datos de identificación (descripción física, fotografías, huellas dactilares, números de documentos de identidad, etc.)</li>
+                <li>Datos jurídicos (delito del que se acusa a la persona en cuestión, referencia a las leyes que reprimen el delito o en las que
+                    se basa la declaración de culpabilidad, datos sobre la orden de detención o la sentencia judicial impuesta, etc.).</li>
+            </ul>
+            <H1 id="otrasFichas"><font color="blue">NINGUNA DE LAS DEMAS NOTIFICACIONES SON PARA DETENER A PERSONAS</font> </H1><br>
+            <h2>Diferecnias</h2>
+            <ul>
+                <li>Los paises miembros no aceptan todas las demas notificaciones</li>
+                <li>En algunos paises se emiten </li>
+            </ul>
+        </p>
+    </div>
+    <!-- ACCION DE LOS CUADROS DE LAS DESCRIPCIONES ABRIRLOS Y CERRARLOS -->
+    <!-- PARA IMPLEMENTAR ESTO BUSQUEEN INTERNET COMO PODER ABRIR UN CUADRO Y CERRARLO  -->
+    <!--Especificamente use estas paginas:
+        https://javascript.info/introduction-browser-events ------- "para el onclick"
+        https://www.w3schools.com/howto/howto_css_modals.asp
+        -->
+    <script>
+        function mostrarDescripcion(id) {
+            var descripcion = document.getElementById(id);
+            descripcion.style.display = 'block';
+        }
+        function cerrarDescripcion(id) {
+            var descripcion = document.getElementById(id);
+            descripcion.style.display = 'none';
+        }
+    </script>
+
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+   
+    
+
+    
+
+</body>
+
+</html>

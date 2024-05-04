@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones Interpol</title>
+    <link rel="stylesheet" href="../../css/resena/resenaInterpol.css">
+</head>
+<body>
+
+    <!--MENU-->
+
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+
+    
+    <main>
+
+        <div class="contenedor">
+            <div class="resena" id="resena1">
+                <img src="../../img/resena/resenaInterpol/1923-Building.jpg" alt="participantes" class="imagen-resena">
+                <p class="texto-resena">La idea de crear un organismo internacional de policía resurgió de la mano de Johannes Schober,
+                    Presidente de la Policía de Viena. Fue él quien convocó el segundo Congreso Internacional de Policía Criminal en Viena 
+                    (Austria), en 1923, al que asistieron representantes de 20 países.</p>
+            </div>
+            <div class="resena" id="resena2">
+                <img src="../../img/resena/resenaInterpol/1923.jpg" alt="Descripción de la imagen 2" class="imagen-resena">
+                <p class="texto-resena">Los participantes en la 4ª reunión de la Asamblea General, celebrada en Ámsterdam en 1927,
+                    aprobaron una resolución en virtud de la cual cada país miembro debía nombrar a un punto central de contacto en
+                    el marco de su estructura policial; estos puntos serían los precursores de las actuales Oficinas Centrales Nacionales (OCN). 
+                    La Asamblea General sigue siendo el órgano rector supremo de la Organización; celebra una reunión anual y toma todas las decisiones 
+                    fundamentales que afectan a la política general, los recursos necesarios para la cooperación internacional, los métodos de trabajo, 
+                    las finanzas y los programas de actividades.</p>
+            </div>
+            <div class="resena" id="resena-central">
+                <img src="../../img/resena/resenaInterpol/UN-preview.png" alt="Descripción de la imagen central" class="imagen-resena">
+                <p class="texto-resena">El 16 de diciembre la Asamblea General de las Naciones Unidas aprobó una resolución por la que se instauraba el Día Internacional de la Cooperación Policial,
+                    en reconocimiento del trabajo vital que efectúan las fuerzas del orden de todo el planeta. Este día internacional se celebrará todos los años el 7 de septiembre, 
+                    fecha en que en 1923 vio la luz la antecesora de INTERPOL, la Comisión Internacional de Policía Criminal.</p>
+            </div>
+            <div class="resena" id="resena3">
+                <img src="../../img/resena/resenaInterpol/1993_EXPERTISE_INTELLIGENCE ANALYSIS_0002.jpeg" alt="Descripción de la imagen 3" class="imagen-resena">
+                <p class="texto-resena">Las fuerzas policiales, las organizaciones internacionales y las entidades privadas utilizan cada vez más las técnicas de 
+                    análisis de información policial. La identificación de patrones delictivos permite advertir de peligros y apoyar de manera más eficaz las actividades operativas. 
+                    En 1993 se creó en la Secretaría General una unidad de análisis de información criminal. 
+                    Programas informáticos especializados permiten a los analistas estudiar los vínculos entre sospechosos, delitos y lugares.</p>
+            </div>
+            <div class="resena" id="resena4">
+                <img src="../../img/resena/resenaInterpol/2005_i_UN_OIPC_13419.jpg" alt="Descripción de la imagen 4" class="imagen-resena">
+                <p class="texto-resena">El 6 de diciembre de 2005 se publicó la primera notificación especial de INTERPOL y el Consejo de Seguridad de las Naciones Unidas. 
+                    El objeto principal de las notificaciones es avisar a las fuerzas del orden nacionales de la existencia de sanciones del Consejo de Seguridad de las 
+                    Naciones Unidas contra determinadas personas o entidades, consistentes esencialmente en la congelación de fondos, la prohibición de viajar y el embargo de armas. 
+                    La notificación especial fue creada para combinar el régimen de sanciones de la ONU con el consolidado sistema de notificaciones de INTERPOL y 
+                    conformar una eficaz herramienta para la aplicación de la ley.</p>
+            </div>
+        </div>
+</main>
+
+
+
+
+        <!--FOOTER-->
+        <div id="footerContainer"></div>
+
+        <!-- Script para cargar el footer -->
+        <script>
+            fetch('../../html/footer/footer.html')  
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footerContainer').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading the footer:', error));
+        </script>
+    
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Dados</title>
+    <link rel="stylesheet" href="../../css/juegoDados/juegoDadosAngel1.css">
+</head>
+
+    <!--MENU-->
+
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+
+<body>
+
+
+
+    <main>
+        <h1>Juego de dados</h1>
+        <div class="jugadores">
+            <div class="jugador" id="jugador1">
+                <h2>Jugador 1</h2>
+                <select id="dados1">
+                    <option value="1">1 dado</option>
+                    <option value="2">2 dados</option>
+                    <option value="3">3 dados</option>
+                    <option value="4">4 dados</option>
+                    <option value="5">5 dados</option>
+                    <option value="6">6 dados</option>
+                    <option value="7">7 dados</option>
+                    <option value="8">8 dados</option>
+                    <option value="9">9 dados</option>
+                    <option value="10">10 dados</option>
+                    <option value="11">11 dados</option>
+                    <option value="12">12 dados</option>
+                </select>
+                <p id="resultado1"></p>
+                <div class="dados"></div>
+            </div>
+            <div class="jugador" id="jugador2">
+                <h2>Jugador 2</h2>
+                <select id="dados2">
+                    <option value="1">1 dado</option>
+                    <option value="2">2 dados</option>
+                    <option value="3">3 dados</option>
+                    <option value="4">4 dados</option>
+                    <option value="5">5 dados</option>
+                    <option value="6">6 dados</option>
+                    <option value="7">7 dados</option>
+                    <option value="8">8 dados</option>
+                    <option value="9">9 dados</option>
+                    <option value="10">10 dados</option>
+                    <option value="11">11 dados</option>
+                    <option value="12">12 dados</option>
+                </select>
+                <p id="resultado2"></p>
+                <div class="dados"></div>
+            </div>
+        </div>
+        <button id="lanzar">Lanzar dados</button>
+        <div class="marcador">
+            <p id="puntos1">Jugador 1: 0 puntos</p>
+            <p id="puntos2">Jugador 2: 0 puntos</p>
+        </div>
+        <div id="ganador"></div>
+    </main>
+
+
+    <script src="../../js/juegoDados/juegoDadosangel.js"></script>
+
+    
+<!--FOOTER-->
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+
+</body>
+
+</html>

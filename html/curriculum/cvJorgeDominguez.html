@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Jorge Dominguez</title>
+    <link rel="stylesheet" href="../../css/curriculum/cvJorgeDominguez.css">
+                                
+</head> 
+
+<body>
+    <!--MENU-->
+    <section id="menuContainer"></section>
+        <script>
+            // Código JavaScript para cargar menu.html
+            fetch('../../html/menu/menu.html')
+            .then(response => response.text())
+                .then(html => {
+                    document.getElementById('menuContainer').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading the menu:', error));
+        </script>
+
+
+    <div class="container">
+        <div class="header">
+            <img src="../../img/curriculum/Emblema_Interpol_azul.jpg" alt="Interpol" class="logo">
+            <h1>Jorge Dominguez Martinez Vertiz</h1>           
+        </div>
+        <div class="photo">
+            <img src="../../img/curriculum/jorgemv.jfif" alt="Foto Jorge Dominguez" class="profile-pic">
+        </div>
+
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+                <li><h3>Director General de Asuntos Policiales Internacionales e INTERPOL</h3></li>
+                <p>Agencia de Investigación Criminal. <br>
+                    May. 2020 - actualidad · 3 años 5 meses</p>
+                
+                <li><h3>Director de Aprehensiones de la Policía Federal Ministerial</h3></li>
+                <p>Fiscalia General de la República <br>
+                    Nov. 2017 - may. 2020 · 2 años 7 meses</p>
+
+                <li><h3>Gerente Nacional de Localización Vehicular.</h3></li>
+                <p>Road-Track <br>
+                may. 2015 - oct. 2017 · 2 años 6 meses</p><br>
+            
+                <li><h3>Director de cumplimiento y ejecucion de mandamientos judiciales</h3></li>
+                <p>Fiscalia General de la Ciudad de México <br>
+                Abr. 2011 - abr. 2015 · 4 años</p><br>
+
+                <li><h3>Director de Inteligencia</h3></li>
+                <p>Fiscalia General de la Cudad de México <br>
+                Abr. 2008 - abr. 2011 · 3 años</p><br>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Educación</h2>
+            <div style="display: flex; align-items: center;">
+                <img src="../../img/curriculum/Anahuac_mexico.jpg" alt="Universidad Anáhuac" class="edu-logo">
+                <div>
+                    <h3>Universidad Anáhuac de México</h3>
+                    <p>Licenciatura en Derecho</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <img src="../../img/curriculum/uvm.jpg" alt="UVM" class="edu-logo">
+                <div><h3>Universidad del Valle de México</h3>
+                    <p>Maestría en Derecho</p></div> 
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><p>Analisis de Inteligencia</p></li>
+                <li><p>Manejo de Crisis</p></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            
+            <h2>Idiomas</h2>
+            <ul>
+                <li><p>Ingles</p></li>
+            </ul>
+        </div>
+
+        <div class="Biografia">
+            <h2>Biografia</h2>
+            <h3>Linkedin</h3>
+            <ul>
+                <li>
+                <a href="https://www.linkedin.com/in/jorge-dominguez-m-v-195bb193/" target="_blank">jorge-dominguez-m-v-linkedin</a><br>
+                </li>
+                
+            <div style="display: flex; align-items: center;">
+                <img src="../../img/curriculum/iceJorge.jpeg" alt="PoliceIceJorge" class="bio"><br>
+            </div>
+            <div class="section">
+                <p style="text-align: justify;" >Jorge Domínguez Martínez Vértiz es un destacado profesional mexicano con una sólida formación en Derecho y Seguridad Pública. Ha ocupado roles clave en la aplicación de la ley, incluyendo Director de Inteligencia y Director de Cumplimiento y Ejecución de Mandamientos Judiciales en la Procuraduría General de Justicia del Distrito Federal. Su experiencia se expandió a nivel nacional como Director de Aprehensiones de la Policía Federal Ministerial y, en la actualidad, lidera la Dirección General de Asuntos Policiales Internacionales e INTERPOL en la Agencia de Investigación Criminal. Su carrera refleja un compromiso inquebrantable con la justicia y la seguridad en México.
+                </div>
+            
+        </div>
+    </div>
+</body>
+
+
+
+<!--Footer-->
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+</html>

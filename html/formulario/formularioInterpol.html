@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Interpol</title>
+    <link rel="stylesheet" href="../../css/formulario/formularioInterpol.css">
+</head>
+<body>
+    
+        <!--MENU-->
+
+    <section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+
+
+
+    <main>
+        
+        <form action="/form-page" method="post">
+            <ul>
+                <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" placeholder="Nombre"/>
+                </li>
+                
+                <li>
+                    <label for="lastname">Apellidos:</label>
+                    <input type="text" id="lastname" name="user_lastname" placeholder="Apellido/s" />
+                </li>
+
+                <li>
+                    <label for="tel">Telefono:</label>
+                    <input type="tel" id="tel" name="user_tel" maxlength="9" placeholder="999 999 999"/>
+                </li>
+                
+                <li>
+                <label for="mail">Correo electrónico:</label>
+                <input type="email" id="mail" name="user_mail" pattern=".+@example\.com" size="30" required placeholder="correomio@correo.com" />
+                </li>
+
+                <li>
+                    <label for="date">Fecha de nacimiento:</label>
+                    <input type="date" id="date" name="user_birth" />
+                </li>
+
+                <li>
+                <label for="msg">Mensaje:</label>
+                <textarea id="msg" name="user_message" maxlength="260"></textarea>
+                </li>
+
+                <li>
+                    <input type='checkbox' id='politicaPrivacidad' name="politica_privacidad" value="acepto">
+                    <label for="politicaPrivacidad">Acepto la politica de Privacidad</label>
+                </li>
+
+                <li>
+                    <label for="direccion">Direccion</label>
+                    <input type="text" id="direccion" name="direccion" maxlength="180" placeholder="Calle, num, localidad">
+                </li>
+
+                <li>
+                    <label for="codigoPostal">Codigo Postal</label>
+                    <input type="text" id="codigoPostal" name="codigo_postal" maxlength="5" placeholder="12345">
+                </li>
+            </ul>
+
+            <button id="enviar" type="submit">
+                Enviar
+            </button>
+
+            <button id="cancelar" type="button">
+                Cancelar
+            </button>
+        </form>
+    </main>
+
+    <!--FOOTER-->
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+</body>
+</html>

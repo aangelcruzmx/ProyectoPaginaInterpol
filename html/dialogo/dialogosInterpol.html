@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diálogos Interactivos</title>
+    <link rel="stylesheet" href="../../css/dialogo/dialogosInterpol.css" />
+</head>
+<body>
+
+    <!--MENU-->
+
+<section id="menuContainer"></section>
+<script>
+    // Código JavaScript para cargar menu.html
+    fetch('../../html/menu/menu.html')
+    .then(response => response.text())
+        .then(html => {
+            document.getElementById('menuContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the menu:', error));
+</script>
+    
+
+    <main>
+            <h1>Apoyo en investigaciones sobre fugitivos</h1>
+                <p class="spitch">Hay que localizar a los fugitivos peligrosos y llevarlos ante los tribunales.
+                Los fugitivos son delincuentes que escapan de la justicia y, como tales, suponen un serio peligro para la seguridad pública mundial. Son personas en movimiento ―a menudo, viajan de uno a otro país utilizando documentos robados o falsos― y oportunistas, y suelen sufragar su continua huida de la justicia con otras actividades delictivas.
+                Una de las funciones principales de INTERPOL desde el momento de su creación ha sido promover el intercambio de información sobre fugitivos y llevarlos ante la justicia en el país en el que cometieron un delito. Este cometido es, si cabe, más importante en el mundo de hoy, donde viajar es muy sencillo y cometer delitos  a escala transfronteriza no presenta muchas dificultades.
+                </p>
+            <p class="cita">
+                "El mundo es cada vez más pequeño. No existen fronteras para los fugitivos, por lo que la cooperación policial internacional es más necesaria que nunca."
+            </p>
+
+
+
+        <div class="dialogo" id="dialogo1">
+            
+            <img src="../../img/dialogo/dialogoInterpol/cnp.png" alt="Personaje 1" class="pSpain"/>
+
+        
+
+            <div class="arrow_box_left">
+                <p>
+                    <h3>Autoridad Española:</h3> Buenas tardes, ¿en qué puedo ayudarle?
+                </p>
+            </div>
+
+        
+
+            <div class="arrow_box_right">
+                <p>
+                    <h3>Autoridad Mexicana:</h3> Buenas tardes. Soy el Inspector García de la Policía Federal de México.
+                    Estamos realizando una investigación y necesitamos información sobre un ciudadano español,
+                    Juan Martínez. ¿Puede proporcionarnos detalles sobre sus antecedentes?
+                </p>
+            </div>
+                <img src="../../img/dialogo/dialogoInterpol/afi.png" alt="Personaje 2" class="pMex" />
+            </div>
+
+
+            <div class="dialogo" id="dialogo2">
+
+                <img src="../../img/dialogo/dialogoInterpol/afi.png" alt="Personaje 2" class="pMex" />
+            
+            <div class="arrow_box_left">
+                <p>
+                    <h3>Autoridad Mexicana:</h3>Estamos buscando a Juan Martínez por su presunta participación
+                    en actividades delictivas en México. Necesitamos información sobre su historial y paradero.
+                </p>
+            </div>
+
+            <div class="arrow_box_right">
+                <p>
+                    <h3>Autoridad Española:</h3>Entiendo la gravedad de la situación. Necesitaré algunos días 
+                    para recopilar la información necesaria. Le informaré tan pronto como la tenga.
+
+    
+                </p>
+            </div>
+
+            <img src="../../img/dialogo/dialogoInterpol/cnp.png" alt="Personaje 1" class="pSpain"/>
+
+
+            </div>
+
+            <div class="dialogo" id="dialogo3">
+
+                <img src="../../img/dialogo/dialogoInterpol/cnp.png" alt="Personaje 1" class="pSpain" />
+            
+            <div class="arrow_box_left">
+                <p>
+                    <h3>Autoridad Española:</h3>
+                    Inspector García, hemos completado la investigación sobre Juan Martínez. 
+                    Parece que ha estado involucrado en actividades criminales aquí en España también. 
+                    Ya ha sido detenido y se encuentra bajo custodia.
+                </p>
+            </div>
+
+            <div class="arrow_box_right">
+                <p>
+                    <h3>Autoridad Mexicana:</h3>
+                    Agradecemos su pronta respuesta. 
+                    ¿Podría emitir los oficios correspondientes para formalizar la solicitud de extradición?
+                </p>
+            </div>
+
+            <img src="../../img/dialogo/dialogoInterpol/afi.png" alt="Personaje 1" class="pMex"/>
+
+            </div>
+
+            <div class="dialogo" id="dialogo4">
+
+                <img src="../../img/dialogo/dialogoInterpol/afi.png" alt="Personaje 1" class="pMex"/>
+
+                
+            
+            <div class="arrow_box_left">
+                <p>
+                    <h3>Autoridad Mexicana:</h3>
+                    Le agradecemos por la información y la rápida acción, autoridad española. 
+                    Realizaremos los trámites necesarios para la extradición de Juan Martínez.
+                </p>
+            </div>
+
+            <div class="arrow_box_right">
+                <p>
+                    <h3>Autoridad Española:</h3>
+                    Estamos aquí para colaborar. 
+                    Si necesita más información o asistencia, no dude en contactarnos.
+                </p>
+            </div>
+
+            <img src="../../img/dialogo/dialogoInterpol/cnp.png" alt="Personaje 1" class="pSpain" />
+
+            </div>
+    </main>
+
+    
+    
+    </body>
+
+    
+    <!--FOOTER-->
+    <div id="footerContainer"></div>
+
+    <!-- Script para cargar el footer -->
+    <script>
+        fetch('../../html/footer/footer.html')  
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footerContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
+
+
+</html>

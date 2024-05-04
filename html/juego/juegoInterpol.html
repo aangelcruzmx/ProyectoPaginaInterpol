@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Atrapa al fugitivo</title>
+    <link rel="stylesheet" href="../../css/juego/juegoInterpol.css">
+</head>
+
+ <!--MENU-->
+
+ <section id="menuContainer"></section>
+ <script>
+     // Código JavaScript para cargar menu.html
+     fetch('../../html/menu/menu.html')
+     .then(response => response.text())
+         .then(html => {
+             document.getElementById('menuContainer').innerHTML = html;
+         })
+         .catch(error => console.error('Error loading the menu:', error));
+ </script>
+
+
+
+<body>  
+
+    <div id="contenedor">
+    
+        <div class="letrero">Atrapa</div> 
+
+        <div class="letrero"> 
+            <span>al Fugitivo Internacional</span>
+        </div>
+    
+    </div>
+
+    <main>       
+        <div id="popupBackground">
+            <div id="popupContainer">
+                <img src="../../img/juego/juegoInterpol/policia.jpg" alt="Policía">
+                <p>Bienvenido detective!, <br>
+                    Soy el Agente <br>
+                    SANTIAGO CRUZ. <br>
+                    sigue mis instrucciones, <br>
+                    Es hora de capturar a los fugitivos.</p>
+                <button id="closePopup">Empezar</button>
+            </div>
+        </div> 
+
+        <div id="cuadroNegro">
+
+            <div class="rectangulo" id="rectanguloNegro1">
+                <img src="../../img/juego/juegoInterpol/fugitivoNivel1.jpg" alt="Fugitivo Nivel 1">
+            </div>
+
+            <div class="rectangulo" id="rectanguloNegro2">
+                <p id="pNegro">Descripción inicial del fugitivo</p>
+            </div>
+        </div>
+
+        <div id="gameArea">
+            <img src="../../img/juego/juegoInterpol/fugitivo1.jpg" id="fugitivo" alt="Fugitivo">
+            </div>
+
+
+        <div id="cuadroVerde">
+
+            <img src="../../img/juego/juegoInterpol/policia.jpg" id="policia" alt="Policía">
+                
+                <div id="contenedorInstrucciones">
+                    <p id="textoInstrucciones">Captura al fugitivo siguiendo las pistas. ¡Tienes 5 intentos antes de que escape!</p>
+                </div>
+                
+        </div>
+    </main>
+    
+    
+    <!--FOOTER-->
+        <div id="footerContainer"></div>
+
+        <!-- Script para cargar el footer -->
+        <script>
+            fetch('../../html/footer/footer.html')  
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footerContainer').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading the footer:', error));
+        </script>
+
+
+
+    <script src="../../js/juego/juegoInterpol.js"></script>
+</body>
+</html>
