@@ -75,17 +75,17 @@
     
     
     <!--FOOTER-->
-        <div id="footerContainer"></div>
+    <div id="footerContainer"></div>
 
-        <!-- Script para cargar el footer -->
-        <script>
-            fetch('../../html/footer/footer.html')  
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('footerContainer').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading the footer:', error));
-        </script>
+    <!-- Script para cargar el footer -->
+    <script>
+        fetch('../../html/footer/footer.html')  
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footerContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
 
 
 

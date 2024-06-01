@@ -1,0 +1,34 @@
+<!--MENU-->
+
+<section id="menuContainer"></section>
+    <script>
+        // Código JavaScript para cargar menu.html
+        fetch('../../html/menu/menu.html')
+        .then(response => response.text())
+            .then(html => {
+                document.getElementById('menuContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the menu:', error));
+    </script>
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+
+    <!--FOOTER-->
+    <div id="footerContainer"></div>
+
+    <!-- Script para cargar el footer -->
+    <script>
+        fetch('../../html/footer/footer.html')  
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footerContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading the footer:', error));
+    </script>
