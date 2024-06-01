@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="../../css/calendario/calendario.css" rel="stylesheet">
+</head>
+
+
+ <!--MENU-->
+
+ <section id="menuContainer"></section>
+ <script>
+     // Código JavaScript para cargar menu.html
+     fetch('../../html/menu/menu.html')
+     .then(response => response.text())
+         .then(html => {
+             document.getElementById('menuContainer').innerHTML = html;
+         })
+         .catch(error => console.error('Error loading the menu:', error));
+ </script>
+ 
+
+
+
+<body>
+    
+    <main>
+
+        <aside class="izquierdo">
+            <div class="controls">
+                <button id="prevMonth">←</button>
+                <select id="monthSelector"></select>
+                <select id="yearSelector"></select>
+                <button id="nextMonth">→</button>
+            </div>
+            <div class="event-form"><!-- Contenedor del form del evento -->
+                <input type="text" id="eventText" placeholder="Event Description">
+                <button onclick="addEvent()">Add Event</button>
+            </div>
+            <div id="miniCalendar">
+                <div id="miniCalendarHeader"></div> <!-- Contenedor para mes y año -->
+                <div id="miniCalendarEvents"></div> <!-- Contenedor para eventos -->
+            </div>
+        </aside>
+        <div id="calendar"></div>
+    </main>
+
+    
+
+  
+    <script src="../../js/calendario/calendario.js"></script>
+
+
+
+
+</body>
+
+<!--FOOTER-->
+<div id="footerContainer"></div>
+
+<!-- Script para cargar el footer -->
+<script>
+    fetch('../../html/footer/footer.html')  
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footerContainer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+</script>
+
+  
+  
+
+
+
+</html>
